@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
     this.comradeService.loadComrades(this.sheetID).then(comrades => this.comrades = comrades);
   }
   ngOnInit(): void {
-    console.log("Initing");
     this.getComrades();
   }
 }
