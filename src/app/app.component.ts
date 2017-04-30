@@ -15,8 +15,7 @@ export class AppComponent implements OnInit {
   };
   sheetID = "";
   title = 'With Labour';
-  description = "We're with Labour. Are you?";
-  comrades: Comrade[];
+  comrades: Comrade[] = [];
   getComrades(): void {
     this.comradeService.loadComrades(this.sheetID).then(comrades => this.comrades = comrades);
   }

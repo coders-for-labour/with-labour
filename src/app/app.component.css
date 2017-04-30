@@ -1,7 +1,44 @@
-body {
-  
+h1, h2 {
+  color: #fff;
+  text-align: center;
 }
 
-h1 {
+h2 a{
+  color: #fff;
+}
 
+div.comrade{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+div.comrade-header > span {
+  font-weight: bold;
+  color: #fff;
+  font-size: x-large;
+}
+
+div.comrade-image-container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 275px;
+}
+
+div.comrade-body img {
+
+}
+
+div.comrade-body p {
+  color: #fff;
+}
+
+div.comrade-footer {
+  text-align: right;
 }
