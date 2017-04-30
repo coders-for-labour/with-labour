@@ -1,3 +1,12 @@
 <h1>
   {{title}}
 </h1>
+<p>
+  {{description}}
+</p>
+<div *ngFor="let comrade of comrades">
+  <p>Image: {{ comrade.image }}</p>
+  <p>Name: {{ comrade.name }}</p>
+  <p>Description: {{ comrade.description }}</p>
+  <p>Link: {{ comrade.link }}</p>
+</div>
