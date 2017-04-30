@@ -1,12 +1,31 @@
+<div class="comrades">
 <h1>
   {{title}}
 </h1>
-<p>
-  {{description}}
-</p>
-<div *ngFor="let comrade of comrades">
-  <p>Image: {{ comrade.image }}</p>
-  <p>Name: {{ comrade.name }}</p>
-  <p>Description: {{ comrade.description }}</p>
-  <p>Link: {{ comrade.link }}</p>
+<h2>
+  We're with Labour. <a href="https://join.labour.org.uk/" title="Join Labour">Are you?</a>
+</h2>
+<div *ngIf="comrades.length > 0" class="comrade-container">
+  <div *ngFor="let comrade of comrades" class="comrade">
+    <div class="comrade-header">
+      <span>{{ comrade.name }}</span>
+    </div>
+
+    <div class="comrade-body">
+      <div class="comrade-image-container">
+        <img src="{{comrade.image}}"/>
+      </div>
+      <div>
+        <p>{{ comrade.description }}</p>
+      </div>
+    </div>
+
+    <div class="comrade-footer">
+      <a href="{{ comrade.link }}" target="_new" title="{{comrade.name}} | See More">See More</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="comrades.length == 0">
+  <h2>Please check back later...</h2>
+</div>
 </div>
