@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ComradeService{
   constructor(public http: Http){}
-  getComrades(): Promise<Comrade[]> {
+  getComrades(sheetID): Promise<Comrade[]> {
     return Promise.resolve(COMRADES);
   }
   data: any = null;
