@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { Comrade } from './comrade';
 import { ComradeService } from './comrade.service';
-import { OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,12 @@ export class AppComponent implements OnInit {
   title = 'With Labour';
   comrades: Comrade[] = [];
   getComrades(): void {
-    this.comradeService.loadComrades(this.sheetID).then(comrades => this.comrades = comrades);
+    this.comradeService.getComrades(this.sheetID).then(comrades => this.comrades = comrades);
   }
   ngOnInit(): void {
     this.getComrades();
+  }
+  openLink(url): void{
+    window.location.href = url;
   }
 }
